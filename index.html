@@ -1,53 +1,141 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>ichirakumart.com</title>
-    <link rel="stylesheet" href="/Users/nakazakiyuudai/Google Drive/[VUWorks]/Web Tech/Assignment1/style.css">
-    <link rel="icon" href="http://ichiraku-tmi.com/images/en/logo_en.png">
-  </head>
-  <body>
-    <section class="top">
-      <section class="shop-name">
-        <h1>Ichiraku Mart</h1>
-        <img class="ichiraku-img" src="http://ichiraku-tmi.com/images/en/logo_en.png" alt="ichiraku-img">
-      </section>
-      <input type="text" placeholder="Search Ichiraku Mart..">
-    </section>
-    <hr>
-    <section class="side">
-      <dl>
-        <dt><strong>Shop by Category</strong></dt>
-        <dd>Grocery</dd>
-        <dd>Electronics</dd>
-        <dd>Pharmacy & Health</dd>
-        <dd>Clothing & Shoes</dd>
-        <dd>Furniture</dd>
-        <dd>Beauty</dd>
-        <dd>Baby</dd>
-      </dl>
-    </section>
-    <hr>
-    <section class="mid">
-
-    </section>
-    <hr>
-    <section class="bottom">
-      <dl>
-        <dt><strong>Customer Service</strong></dt>
-        <dd>Help</dd>
-        <dd>Refunds</dd>
-        <dd>Recalls</dd>
-        <dd>Feedbacks</dd>
-      </dl>
-      <dl>
-        <dt><strong>Get to Know Us</strong></dt>
-        <dd>Our Company</dd>
-        <dd>Store Directory</dd>
-        <dd>Careers</dd>
-        <dd>Our Suppliers</dd>
-      </dl>
-    </section>
-
-  </body>
+<!--question: who deals with design irl?-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ichiraku mart</title>
+        <link rel="icon" href="https://i.pinimg.com/originals/50/f5/2e/50f52e1737e150c33f281939db4537e4.jpg">
+    </head>
+    <body>
+        <header>
+            <h1>Ichiraku Mart</h1>
+            <input type="text" id="searchbox" name="keyword" placeholder="Search for products">
+            <img src="https://i.pinimg.com/originals/50/f5/2e/50f52e1737e150c33f281939db4537e4.jpg" alt="Ichiraku Mart logo" width="400">
+            <!--src: https://www.pinterest.com/pin/184788390943981243/-->
+            <nav>
+                <!--question: do these need to have a hyperlink?-->
+                <a>Account</a> |
+                <a>Customer Service</a> |
+                <a>Shopping Cart</a> 
+            </nav>
+        </header>
+        <!--main vs section :)-->
+        <section id="main">
+            <img src="https://www.lidl.sk/var/retail/storage/images/_aliases/2360x570/1/9/8/5/885891-2-sk-SK/FWT3%20zimn%C3%BD_vypredaj_2360x570.jpg" alt="special sales" width="1200">
+            <!--src: https://www.lidl.sk/-->
+            <p>Dear customers!<br><br>
+                Due to Covid19 something something elderly 9:00-11:00.<br>
+                Something something regular customers 7:00-9:00 & 11:00-23:00.<br><br>
+                We thank you for your understanding and wish you happy shopping!
+            </p>
+            <table>
+                <!--last row=?????????-->
+                <tr>
+                    <!--Do the names have to match the names in the document?
+                    Amount - ???? -->
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Origin</th>
+                    <th>Best before</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td><img src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/283/283659/a-basket-of-eggs.jpg?w=1155&h=1541" alt="Basket of eggs" width="250"></td>
+                    <!--src: https://www.medicalnewstoday.com/articles/283659-->
+                    <td>Tamago</td>
+                    <td>Chiken</td>
+                    <td>20:00</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td><img src="https://www.welcometothetable.coop/sites/default/files/wp-content/uploads/2011/06/Scallions_0.jpg" alt="a pile of scallions" width="250"></td>
+                    <!--https://www.welcometothetable.coop/fresh-from-the-source/scallions-->
+                    <td>Scallions</td>
+                    <td>Slovakia</td>
+                    <td>06.1.1000</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <!--rearrange collumns for submit button fuck-->
+                    <form action="https://wt.ops.labs.vu.nl/api21/5258e0ac" method="POST" enctype="multipart/form-data">
+                        <!--butto for upload? or link?
+                        {"Error": "Missing field image in dict_keys(['product', 'origin', 'best_before_date', 'amount'])."}-->
+                        <td><input type="file" name="image" id="image"></td>
+                        <td><input type="text" name="product" id="product" placeholder="Apple"></td>
+                        <td><input type="text" name="origin" id="origin" placeholder="Slovenskooo"></td>
+                        <td><input type="text" name="best_before_date" id="best_before_date" placeholder="1.1.1990"></td>
+                        <td><input type="text" name="amount" id="amount" placeholder="3"></td>
+                        <td><input type="submit"></td>
+                    </form>
+                </tr>
+            </table>
+        </section>
+        <section id="sidebar">
+            <!--dl or ul?-->
+            <h1>Categories</h1>
+            <ul class="categories">
+                <li>Meat Products</li>
+                <li>Vegetables</li>
+                <li>yeah</li>
+                <li>Dairy</li>
+                <li>no</li>
+                <li>Fokin frozen</li>
+            </ul>
+            <h2>Hours</h2>
+            <table>
+                <tr>
+                    <th>Monday</th>
+                    <td>7:00-23:00</td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td>7:00-23:00</td>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td>7:00-23:00</td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td>7:00-23:00</td>
+                </tr>
+                <tr>
+                    <th>Friday</th>
+                    <td>7:00-23:00</td>
+                </tr>
+                <tr>
+                    <th>Saturday</th>
+                    <td>8:00-22:00</td>
+                </tr>
+                <tr>
+                    <th>Sunday</th>
+                    <td>8:00-22:00</td>
+                </tr>
+            </table>
+        </section>
+        <section id="footer">
+            <h1>About Us</h1>
+            <ul>
+                <li>About Ichiraku Mart</li>
+                <li>Our partners</li>
+            </ul>
+            <h2>Online Shopping</h2>
+            <ul>
+                <li>Account Management</li>
+                <li>Orders</li>
+                <li>Delivery Rates & Policies</li>
+                <li>Returns</li>
+            </ul>
+            <h2>Contact Us</h2>
+            <dl>
+                <dt>Send us an email</dt>
+                    <dd>ichiraku@ichiraku.com</dd>
+                <dt>Call us</t>
+                    <dd>0464654657657678</dd>
+            </dl>
+            <p>
+                &copy; 2021 Ichiraku Mart.
+            </p>
+        </section>
+    </body>
 </html>
